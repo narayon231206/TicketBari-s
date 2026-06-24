@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Next.js build output
+client/.next/
+
+# Environment files
+.env
+.env.local
+client/.env.local
+server/.env
+
+# Temporary files
+git_commit_state.json
+git_committer.js
+git_committer.log
