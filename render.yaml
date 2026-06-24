@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: ticketbari-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: MONGO_URI
+        sync: false # MongoDB Atlas connection string
+      - key: JWT_SECRET
+        sync: false # JWT signing secret key
+      - key: BETTER_AUTH_SECRET
+        sync: false # Secret key for BetterAuth
+      - key: BETTER_AUTH_URL
+        sync: false # The Render deployment URL (e.g. https://ticketbari-backend.onrender.com)
+      - key: CLIENT_URL
+        sync: false # The Vercel frontend URL (e.g. https://ticketbari.vercel.app)
+      - key: STRIPE_SECRET_KEY
+        sync: false # Stripe dashboard secret key
+      - key: IMGBB_API_KEY
+        sync: false # API key for image hosting upload
+      - key: GOOGLE_CLIENT_ID
+        sync: false # Google OAuth credentials (if social login is used)
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false # Google OAuth credentials (if social login is used)
